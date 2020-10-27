@@ -1,4 +1,22 @@
-.startBtn {
+.zoomHeader {
   position: relative;
+  width: 100%;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  background-color: #666;
   z-index: 999;
+  & > input,
+  & > select,
+  & > button {
+    height: 1.5em;
+    border-radius: 0.3em;
+    border: none;
+    margin-left: 1em;
+    padding: 0.1em 0.2em;
+  }
+  & > button {
+    background-color: #10aaff;
+    color: #fff;
+  }
 }
