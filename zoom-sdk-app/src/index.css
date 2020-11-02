@@ -28,6 +28,7 @@ code {
   border-radius: 0.6em !important;
   transition: 0.3s box-shadow !important;
 }
+
 .btn-default:hover,
 .send-video-container__btn:hover,
 .footer-button__button:hover,
