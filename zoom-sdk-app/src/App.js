@@ -6,6 +6,7 @@ import '../node_modules/@zoomus/websdk/dist/css/react-select.css';
 
 const App = () => {
 
+  const [meetingStarted, setMeetingStarted] = useState(false);
   const [meetConfig, setMeetConfig] = useState({
     apiKey: 'Zz0o6PmATEWFOK_DPOCU5A', // should be received from the closed endpoint on server
     meetingNumber: 86928057773,
@@ -44,6 +45,7 @@ const App = () => {
         })		
       }
     })
+    setMeetingStarted(true);
     } catch(error) {
       console.log(error);
     }
@@ -57,7 +59,7 @@ const App = () => {
 
 
   return (
-    <div className={styles.zoomHeader}>
+    <div className={meetingStarted ? styles.zoomHeaderHide : styles.zoomHeader}>
       <input type={"text"} placeholder={"Meeting number"} onChange={(e) => setMeetConfig({...meetConfig, meetingNumber: parseInt(e.target.value)})}/>
       <input type={"text"} placeholder={"Meeting password"} onChange={(e) => setMeetConfig({...meetConfig, passWord: e.target.value})}/>
       <input type={"text"} placeholder={"User Name"} onChange={(e) => setMeetConfig({...meetConfig, userName: e.target.value})}/>
