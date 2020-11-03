@@ -27,6 +27,8 @@ code {
   border: none !important;
   border-radius: 0.6em !important;
   transition: 0.3s box-shadow !important;
+  margin: 0 0.3em !important;
+  color: #fff !important;
 }
 
 .btn-default:hover,
