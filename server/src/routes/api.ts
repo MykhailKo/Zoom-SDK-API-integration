@@ -2,13 +2,11 @@ import express, {
   Request as RequestExpress,
   Response as ResponseExpress,
 } from "express";
-import fetch from "node-fetch";
-import bodyParser from "body-parser";
+//import fetch from "node-fetch";
 import crypto from "crypto";
 import { Constants } from "../constants";
 
 const apiRouter = express.Router();
-apiRouter.use(bodyParser.json());
 
 apiRouter.route("/").all((_req: any, res: any) => {
   res.statusCode = 200;
@@ -100,7 +98,7 @@ apiRouter
       Constants.API_KEY + _req.body.meetingNumber + timestamp + _req.body.role
     ).toString("base64");
     const hash = crypto
-      .createHmac("sha256", Constants.API_SECRET!)
+      .createHmac("sha256", process.env.API_SECRET!)
       .update(msg)
       .digest("base64");
     const signature = Buffer.from(

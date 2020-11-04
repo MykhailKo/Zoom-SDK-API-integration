@@ -1,13 +1,78 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* styling zoom elements */
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+.meeting-app {
+  font-family: "Rubik" !important;
+}
+
+.btn-default,
+.send-video-container__btn,
+.footer-button__button,
+.join-audio-container__btn {
+  background-color: #1d2366 !important;
+  border: none !important;
+  border-radius: 0.6em !important;
+  transition: 0.3s box-shadow !important;
+  margin: 0 0.3em !important;
+  color: #fff !important;
+}
+
+.btn-default:hover,
+.send-video-container__btn:hover,
+.footer-button__button:hover,
+.join-audio-container__btn:hover {
+  box-shadow: 0 0 10px #1d2366 !important;
+  color: #fff !important;
+}
+
+.footer__leave-btn {
+  color: #fff !important;
+  background: #ef5261 !important;
+  border-radius: 0.6em !important;
+  margin: 0 0.3em 0 0 !important;
+}
+.footer__leave-btn:hover {
+  background: #d6192b !important;
+}
+
+.chat-header__chat-pop-btn,
+.participants-header__participants-pop-btn {
+  background: #88c8ea !important;
+}
+
+.active-video-container {
+  background: #93c4f1 !important;
+}
+
+.footer {
+  height: 60px !important;
+  padding: 0.3em 0 !important;
+  color: #fff !important;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#d1e1f0),
+    to(#a6cee3)
+  ) !important;
+  background-image: -o-linear-gradient(top, #a6cee3, #d1e1f0) !important;
+  background-image: linear-gradient(to bottom, #d1e1f0, #a6cee3) !important;
+}
+
+.security-option-menu__button-text {
+  color: #fff !important;
 }
