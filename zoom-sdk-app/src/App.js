@@ -8,7 +8,7 @@ const App = () => {
 
   const [meetingStarted, setMeetingStarted] = useState(false);
   const [meetConfig, setMeetConfig] = useState({
-    apiKey: 'Zz0o6PmATEWFOK_DPOCU5A', // should be received from the closed endpoint on server
+    apiKey: 'YOUR_ZOOM_API_KEY', // should be received from the closed endpoint on server
     meetingNumber: 86928057773,
     leaveUrl: 'localhost:3000',
     userName: 'Mykhail Kosiuk',
