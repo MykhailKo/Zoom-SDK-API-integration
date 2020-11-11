@@ -1,0 +1,39 @@
+.zoomHeader {
+  position: relative;
+  width: 100%;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  background-color: #666;
+  z-index: 999;
+  transition: 0.3s transform;
+  & > input,
+  & > select,
+  & > button {
+    height: 1.5em;
+    border-radius: 0.3em;
+    border: none;
+    margin-left: 1em;
+    padding: 0.1em 0.2em;
+  }
+  & > button {
+    background-color: #10aaff;
+    color: #fff;
+  }
+}
+.zoomHeaderHide {
+  @extend .zoomHeader;
+  transform: translateY(-100%);
+}
+
+.footer {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#d1e1f0),
+    to(#a6cee3)
+  ) !important;
+  background-image: -o-linear-gradient(top, #a6cee3, #d1e1f0) !important;
+  background-image: linear-gradient(to bottom, #d1e1f0, #a6cee3) !important;
+}
